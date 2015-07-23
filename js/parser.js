@@ -130,14 +130,15 @@ fn.Parser = function(){
 	}
 	
 	
-	
+	// 4 + 4 / 20 + 10
+	// 4 / 20 + 4 + 10
 	//constructs the postfix string
 		//constructs the postfix string
 	function createPostfix(){
 		var currentChar, stack = [], postfix = [];
 		
 		for(var i = 0; i < tokens.length; i++){
-			currentChar = tokens[i];
+			currentChar = tokens[i];                                                                                                    
 			if(currentChar.type === "opr"){
 				setOrder(currentChar);
 				if(stack.length === 0){
